@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="46" viewBox="0 0 220 46" role="img" aria-label="EXPLORE MY WORK  ↗">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#60a5fa"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+  <rect x="1" y="1" width="218" height="44" rx="12" fill="#070b1b" stroke="url(#g)" stroke-width="2"/>
+  <circle cx="23" cy="23" r="5" fill="#60a5fa"/>
+  <text x="117.0" y="29" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1" fill="#f4f8ff">EXPLORE MY WORK  ↗</text>
+</svg>

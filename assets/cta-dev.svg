@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="190" height="46" viewBox="0 0 190 46" role="img" aria-label="FOLLOW ON DEV  ↗">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs>
+  <rect x="1" y="1" width="188" height="44" rx="12" fill="#070b1b" stroke="url(#g)" stroke-width="2"/>
+  <circle cx="23" cy="23" r="5" fill="#8b5cf6"/>
+  <text x="102.0" y="29" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1" fill="#f4f8ff">FOLLOW ON DEV  ↗</text>
+</svg>

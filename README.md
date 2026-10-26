@@ -4,80 +4,99 @@
   <img src="./assets/galaxy-header.gif" alt="Animated galaxy banner for Aryan Kumar — Interactive Web, AI Automation, Bots and Games" width="100%" />
 </a>
 
-### I build digital worlds that move, think, and ship.
+### I don't just ship pages. I build digital worlds people remember.
 
-[![Portfolio](https://img.shields.io/badge/EXPLORE_DIPC-22D3EE?style=for-the-badge&logo=vercel&logoColor=050816)](https://dipc-ochre.vercel.app)
-[![Repositories](https://img.shields.io/badge/VIEW_MY_WORK-8B5CF6?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aryan170911?tab=repositories)
-
-</div>
-
-## `> whoami`
-
-I'm **Aryan Kumar**, the builder behind **DIPC**. I create immersive web experiences, practical AI automation, and bots and games with personality.
-
-- 🌌 Crafting interactive interfaces with motion, 3D, and thoughtful details
-- 🤖 Building automation and conversational experiences that solve real problems
-- 🎮 Experimenting with bots, game systems, and playful digital worlds
-- ⚡ Turning ambitious ideas into working products
-
-## `> current_stack`
-
-<div align="center">
-
-![Next.js](https://img.shields.io/badge/Next.js-050816?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-071426?style=for-the-badge&logo=react&logoColor=22D3EE)
-![TypeScript](https://img.shields.io/badge/TypeScript-071426?style=for-the-badge&logo=typescript&logoColor=60A5FA)
-![JavaScript](https://img.shields.io/badge/JavaScript-071426?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Python](https://img.shields.io/badge/Python-071426?style=for-the-badge&logo=python&logoColor=8B5CF6)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-071426?style=for-the-badge&logo=tailwindcss&logoColor=22D3EE)
-![Three.js](https://img.shields.io/badge/Three.js-071426?style=for-the-badge&logo=threedotjs&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-071426?style=for-the-badge&logo=greensock&logoColor=88CE02)
+<a href="https://dipc-ochre.vercel.app"><img src="./assets/cta-dipc.svg" alt="Launch DIPC" height="42" /></a>
+<a href="https://github.com/Aryan170911?tab=repositories"><img src="./assets/cta-work.svg" alt="Explore my work" height="42" /></a>
+<a href="https://dev.to/aryan170911"><img src="./assets/cta-dev.svg" alt="Follow on DEV" height="42" /></a>
 
 </div>
 
-## `> selected_work`
+## `> identity`
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌐 DIPC</h3>
-      <p>A production-grade company experience built with Next.js, TypeScript, 3D visuals, motion, bilingual content, and an AI sales assistant.</p>
-      <p>
-        <a href="https://dipc-ochre.vercel.app"><strong>Live experience ↗</strong></a>
-        ·
-        <a href="https://github.com/Aryan170911/dipc"><strong>Source ↗</strong></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🦷 The Dentist</h3>
-      <p>An animated clinic website for The Dentist, Khemnichak Patna, with a focused user journey and WhatsApp booking.</p>
-      <p><a href="https://github.com/Aryan170911/the-dentist"><strong>Explore project ↗</strong></a></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>✨ Portfolio Demos</h3>
-      <p>A collection of frontend experiments and interactive portfolio concepts built with JavaScript and Vite.</p>
-      <p><a href="https://github.com/Aryan170911/portfolio-demos"><strong>Explore project ↗</strong></a></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🏗️ Mathrubhumi Enterprises</h3>
-      <p>An interactive corporate experience for a steel engineering and fabrication company, built with responsive motion and focused lead capture.</p>
-      <p><a href="https://github.com/Aryan170911/Mathrubhumi-Enterprises"><strong>Explore project ↗</strong></a></p>
-    </td>
-  </tr>
-</table>
+I'm **Aryan Kumar**, the builder behind **DIPC**. I combine engineering and visual storytelling to create immersive websites, practical AI automation, Telegram bots, and game systems with personality.
 
-## `> transmission`
+> **My north star:** make technology feel less like a tool and more like an experience.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="./assets/mission-control-mobile.svg" />
+  <img src="./assets/mission-control.svg" alt="Mission Control: live overview of Aryan Kumar's public GitHub work" width="100%" />
+</picture>
+
+## `> flagship_missions`
+
+### `01` · [DIPC — Digital India Promotion Company](https://github.com/Aryan170911/dipc)
+
+**A production-grade company experience built to turn attention into conversations.**
+
+Next.js and TypeScript power a bilingual interface with WebGL visuals, scroll choreography, live GitHub data, an AI sales assistant, and graceful performance fallbacks for lower-powered devices.
+
+**Stack:** `Next.js` · `React` · `TypeScript` · `Three.js` · `GSAP` · `Tailwind CSS`
+
+[**Launch the live experience ↗**](https://dipc-ochre.vercel.app) · [**Explore the source ↗**](https://github.com/Aryan170911/dipc)
+
+---
+
+### `02` · [The Dentist](https://github.com/Aryan170911/the-dentist)
+
+**A focused clinic website designed to move visitors from discovery to booking.**
+
+Animated interactions, responsive presentation, and direct WhatsApp booking create a clear path for patients at The Dentist, Khemnichak Patna.
+
+**Stack:** `JavaScript` · `HTML` · `CSS` · `Motion Design`
+
+[**Explore the project ↗**](https://github.com/Aryan170911/the-dentist)
+
+---
+
+### `03` · [Mathrubhumi Enterprises](https://github.com/Aryan170911/Mathrubhumi-Enterprises)
+
+**An interactive corporate experience for steel engineering and fabrication.**
+
+The site pairs industrial clarity with responsive motion, project storytelling, and focused lead capture for a business serving India and Nepal.
+
+**Stack:** `HTML` · `Tailwind CSS` · `JavaScript` · `GSAP`
+
+[**Explore the project ↗**](https://github.com/Aryan170911/Mathrubhumi-Enterprises)
+
+---
+
+### `04` · [Portfolio Demos](https://github.com/Aryan170911/portfolio-demos)
+
+**A laboratory for interactive frontend concepts.**
+
+Reusable experiments spanning clinic, restaurant, chatbot, and portfolio experiences—built to explore how motion and interface details shape a product's character.
+
+**Stack:** `React` · `Vite` · `JavaScript` · `Tailwind CSS`
+
+[**Enter the laboratory ↗**](https://github.com/Aryan170911/portfolio-demos)
+
+## `> systems_online`
+
+```text
+FRONTEND     Next.js · React · TypeScript · JavaScript · Tailwind CSS
+MOTION       Three.js · React Three Fiber · GSAP · Framer Motion
+AUTOMATION   Python · Node.js · REST APIs · Telegram Bot API
+CRAFT        Responsive UI · Accessibility · Performance · Storytelling
+```
+
+## `> community_signal`
+
+- 🌌 Building ambitious digital experiences through **DIPC**
+- 🍂 Registered for [**Hacktoberfest 2026**](https://hacktoberfest.com)
+- 📝 Writing and learning with the [**DEV Community**](https://dev.to/aryan170911)
+- 🤝 Open to collaborations where design, automation, and imagination overlap
+
+## `> open_channel`
 
 <div align="center">
 
-**Open to building bold digital experiences and useful automation.**
+### Have an idea that deserves more than an ordinary interface?
 
-<a href="https://github.com/Aryan170911">
-  <img src="https://img.shields.io/badge/LET'S_BUILD_SOMETHING-8B5CF6?style=for-the-badge&logo=github&logoColor=white" alt="Let's build something" />
-</a>
+**Let's turn it into something people want to explore.**
 
-<sub>Designed in the Neon Forge · Powered by curiosity</sub>
+<a href="https://dipc-ochre.vercel.app"><img src="./assets/cta-build.svg" alt="Build with DIPC" height="46" /></a>
+
+<sub>NEON FORGE // DIPC // PATNA, INDIA</sub>
 
 </div>

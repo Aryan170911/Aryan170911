@@ -1,0 +1,33 @@
+name: Refresh profile telemetry
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Rebuild self-hosted profile assets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_profile_assets.py
+
+      - name: Commit meaningful changes only
+        run: |
+          if git diff --quiet -- assets/mission-control.svg assets/mission-control-mobile.svg; then
+            echo "Profile telemetry is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/mission-control.svg assets/mission-control-mobile.svg
+          git commit -m "chore: refresh profile telemetry"
+          git push

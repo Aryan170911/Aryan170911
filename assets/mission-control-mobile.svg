@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="455" viewBox="0 0 600 455" role="img" aria-labelledby="title desc">
+  <title id="title">Aryan Kumar mission control</title>
+  <desc id="desc">Mobile summary of public builds, core languages, latest launch, and flagship project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#050816"/><stop offset=".55" stop-color="#0a1025"/><stop offset="1" stop-color="#140b2d"/></linearGradient>
+    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+  </defs>
+  <style>
+    .eyebrow { font: 600 13px 'Segoe UI',Arial,sans-serif; letter-spacing: 3px; fill:#8ea3c7 }
+    .heading { font: 700 24px 'Segoe UI',Arial,sans-serif; letter-spacing: 1px; fill:#eef7ff }
+    .label { font: 600 12px Consolas,monospace; letter-spacing: 1px; fill:#8ea3c7 }
+    .value { font: 700 23px 'Segoe UI',Arial,sans-serif; letter-spacing:.4px }
+  </style>
+  <rect x="1" y="1" width="598" height="453" rx="24" fill="url(#bg)" stroke="#26345f"/>
+  <path d="M28 78 H572" stroke="url(#line)" opacity=".7"/>
+  <circle cx="557" cy="37" r="4" fill="#22d3ee"/>
+  <text x="28" y="34" class="eyebrow">LIVE TELEMETRY</text>
+  <text x="28" y="67" class="heading">MISSION CONTROL</text>
+  
+      <g transform="translate(28 104)">
+        <rect width="258" height="140" rx="18" fill="#0b1228" stroke="#22325e" />
+        <circle cx="22" cy="27" r="5" fill="#22d3ee" />
+        <text x="37" y="33" class="label">PUBLIC BUILDS</text>
+        <text x="20" y="88" class="value" fill="#22d3ee">16</text>
+      </g>
+      <g transform="translate(314 104)">
+        <rect width="258" height="140" rx="18" fill="#0b1228" stroke="#22325e" />
+        <circle cx="22" cy="27" r="5" fill="#a78bfa" />
+        <text x="37" y="33" class="label">CORE LANGUAGES</text>
+        <text x="20" y="88" class="value" fill="#a78bfa">4</text>
+      </g>
+      <g transform="translate(28 272)">
+        <rect width="258" height="140" rx="18" fill="#0b1228" stroke="#22325e" />
+        <circle cx="22" cy="27" r="5" fill="#60a5fa" />
+        <text x="37" y="33" class="label">LATEST LAUNCH</text>
+        <text x="20" y="88" class="value" fill="#60a5fa">THE DENTIST</text>
+      </g>
+      <g transform="translate(314 272)">
+        <rect width="258" height="140" rx="18" fill="#0b1228" stroke="#22325e" />
+        <circle cx="22" cy="27" r="5" fill="#c084fc" />
+        <text x="37" y="33" class="label">FLAGSHIP</text>
+        <text x="20" y="88" class="value" fill="#c084fc">DIPC</text>
+      </g>
+</svg>
