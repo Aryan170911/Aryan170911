@@ -84,7 +84,7 @@ CRAFT        Responsive UI · Accessibility · Performance · Storytelling
 
 - 🌌 Building ambitious digital experiences through **DIPC**
 - 🍂 Registered for [**Hacktoberfest 2026**](https://hacktoberfest.com)
-- 📝 Writing and learning with the [**DEV Community**](https://dev.to/aryan170911)
+- 📝 Connected with the [**DEV Community**](https://dev.to/aryan170911)
 - 🤝 Open to collaborations where design, automation, and imagination overlap
 
 ## `> open_channel`
@@ -97,6 +97,6 @@ CRAFT        Responsive UI · Accessibility · Performance · Storytelling
 
 <a href="https://dipc-ochre.vercel.app"><img src="./assets/cta-build.svg" alt="Build with DIPC" height="46" /></a>
 
-<sub>NEON FORGE // DIPC // PATNA, INDIA</sub>
+<sub>NEON FORGE // DIPC // BUILDING IN PUBLIC</sub>
 
 </div>
