@@ -1,8 +1,4 @@
-"""Generate self-hosted profile visuals from public GitHub data.
-
-The script uses only Python's standard library so the scheduled workflow has no
-package-install step and no third-party statistics service.
-"""
+"""Generate self-hosted manga profile telemetry from public GitHub data."""
 
 from __future__ import annotations
 
@@ -16,6 +12,10 @@ from urllib.request import Request, urlopen
 USERNAME = "Aryan170911"
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
+PAPER = "#f4e9d8"
+INK = "#111111"
+ORANGE = "#f47a1f"
+LAVENDER = "#8c73c7"
 
 
 def github_json(path: str):
@@ -37,107 +37,99 @@ def svg_escape(value: object) -> str:
 
 
 def card_cell(x: int, label: str, value: str, accent: str) -> str:
-    return f"""
-      <g transform="translate({x} 92)">
-        <rect width="258" height="112" rx="18" fill="#0b1228" stroke="#22325e" />
-        <circle cx="24" cy="25" r="5" fill="{accent}" />
+    return f'''
+      <g transform="translate({x} 98)">
+        <rect width="258" height="108" rx="4" fill="#fffaf0" stroke="{INK}" stroke-width="3"/>
+        <path d="M0 12 L12 0 M246 108 L258 96" stroke="{accent}" stroke-width="5"/>
+        <circle cx="24" cy="25" r="5" fill="{accent}"/>
         <text x="39" y="31" class="label">{svg_escape(label)}</text>
-        <text x="22" y="75" class="value" fill="{accent}">{svg_escape(value)}</text>
-      </g>"""
+        <text x="22" y="77" class="value" fill="{INK}">{svg_escape(value)}</text>
+      </g>'''
+
+
+def mobile_card_cell(x: int, y: int, label: str, value: str, accent: str) -> str:
+    return f'''
+      <g transform="translate({x} {y})">
+        <rect width="258" height="140" rx="4" fill="#fffaf0" stroke="{INK}" stroke-width="3"/>
+        <path d="M0 12 L12 0 M246 140 L258 128" stroke="{accent}" stroke-width="5"/>
+        <circle cx="22" cy="27" r="5" fill="{accent}"/>
+        <text x="37" y="33" class="label">{svg_escape(label)}</text>
+        <text x="20" y="91" class="value" fill="{INK}">{svg_escape(value)}</text>
+      </g>'''
 
 
 def write_mission_control(repos: list[dict]) -> None:
     originals = [repo for repo in repos if not repo.get("fork") and repo["name"] != USERNAME]
     languages = sorted({repo["language"] for repo in originals if repo.get("language")})
     latest = next((repo for repo in originals if repo.get("pushed_at")), None)
-    latest_name = latest["name"].replace("-", " ") if latest else "IN ORBIT"
-    latest_name = latest_name[:18].upper()
+    latest_name = (latest["name"].replace("-", " ") if latest else "IN TRAINING")[:18].upper()
 
     cells = "".join(
         (
-            card_cell(42, "PUBLIC BUILDS", str(len(originals)), "#22d3ee"),
-            card_cell(328, "CORE LANGUAGES", str(len(languages)), "#a78bfa"),
-            card_cell(614, "LATEST LAUNCH", latest_name, "#60a5fa"),
-            card_cell(900, "FLAGSHIP", "DIPC", "#c084fc"),
+            card_cell(42, "PUBLIC MISSIONS", str(len(originals)), ORANGE),
+            card_cell(328, "CORE TECHNIQUES", str(len(languages)), LAVENDER),
+            card_cell(614, "LATEST SCROLL", latest_name, ORANGE),
+            card_cell(900, "S-RANK FLAGSHIP", "DIPC", LAVENDER),
         )
     )
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="245" viewBox="0 0 1200 245" role="img" aria-labelledby="title desc">
-  <title id="title">Aryan Kumar mission control</title>
-  <desc id="desc">Live summary of public builds, core languages, latest launch, and flagship project.</desc>
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="245" viewBox="0 0 1200 245" role="img" aria-labelledby="title desc">
+  <title id="title">Aryan Kumar manga training record</title>
+  <desc id="desc">Live summary of public missions, core techniques, latest scroll, and flagship project.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#050816"/><stop offset="0.55" stop-color="#0a1025"/><stop offset="1" stop-color="#140b2d"/>
-    </linearGradient>
-    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="{INK}" opacity=".13"/></pattern>
   </defs>
   <style>
-    .eyebrow {{ font: 600 14px 'Segoe UI',Arial,sans-serif; letter-spacing: 4px; fill:#8ea3c7 }}
-    .heading {{ font: 700 24px 'Segoe UI',Arial,sans-serif; letter-spacing: 1px; fill:#eef7ff }}
-    .label {{ font: 600 12px Consolas,monospace; letter-spacing: 1.4px; fill:#8ea3c7 }}
-    .value {{ font: 700 22px 'Segoe UI',Arial,sans-serif; letter-spacing:.5px }}
+    .eyebrow {{ font: 800 13px Arial,sans-serif; letter-spacing:4px; fill:{LAVENDER} }}
+    .heading {{ font: 900 27px 'Arial Black',Impact,sans-serif; letter-spacing:1px; fill:{INK} }}
+    .label {{ font: 700 12px Consolas,monospace; letter-spacing:1.2px; fill:#5a5148 }}
+    .value {{ font: 900 22px 'Arial Black',Arial,sans-serif; letter-spacing:.3px }}
   </style>
-  <rect x="1" y="1" width="1198" height="243" rx="24" fill="url(#bg)" stroke="#26345f"/>
-  <path d="M28 67 H1172" stroke="url(#line)" opacity=".7"/>
-  <circle cx="1147" cy="35" r="4" fill="#22d3ee" filter="url(#glow)"/>
-  <text x="42" y="35" class="eyebrow">LIVE TELEMETRY</text>
-  <text x="42" y="63" class="heading">MISSION CONTROL</text>
+  <rect x="1" y="1" width="1198" height="243" rx="12" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>
+  <rect x="1" y="1" width="1198" height="243" rx="12" fill="url(#dots)"/>
+  <path d="M24 68 H1176" stroke="{INK}" stroke-width="4"/><path d="M24 75 H1176" stroke="{ORANGE}" stroke-width="2"/>
+  <text x="42" y="31" class="eyebrow">LIVE FROM GITHUB</text>
+  <text x="42" y="61" class="heading">TRAINING RECORD</text>
+  <text x="1160" y="52" text-anchor="end" font-family="Georgia,serif" font-size="44" font-weight="700" fill="{INK}" opacity=".18">忍</text>
   {cells}
-</svg>
-"""
+</svg>'''
     (ASSETS / "mission-control.svg").write_text(svg, encoding="utf-8")
 
     mobile_cells = "".join(
         (
-            mobile_card_cell(28, 104, "PUBLIC BUILDS", str(len(originals)), "#22d3ee"),
-            mobile_card_cell(314, 104, "CORE LANGUAGES", str(len(languages)), "#a78bfa"),
-            mobile_card_cell(28, 272, "LATEST LAUNCH", latest_name, "#60a5fa"),
-            mobile_card_cell(314, 272, "FLAGSHIP", "DIPC", "#c084fc"),
+            mobile_card_cell(28, 104, "PUBLIC MISSIONS", str(len(originals)), ORANGE),
+            mobile_card_cell(314, 104, "CORE TECHNIQUES", str(len(languages)), LAVENDER),
+            mobile_card_cell(28, 272, "LATEST SCROLL", latest_name, ORANGE),
+            mobile_card_cell(314, 272, "S-RANK FLAGSHIP", "DIPC", LAVENDER),
         )
     )
-    mobile_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="455" viewBox="0 0 600 455" role="img" aria-labelledby="title desc">
-  <title id="title">Aryan Kumar mission control</title>
-  <desc id="desc">Mobile summary of public builds, core languages, latest launch, and flagship project.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#050816"/><stop offset=".55" stop-color="#0a1025"/><stop offset="1" stop-color="#140b2d"/></linearGradient>
-    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
-  </defs>
+    mobile_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="600" height="455" viewBox="0 0 600 455" role="img" aria-labelledby="title desc">
+  <title id="title">Aryan Kumar manga training record</title>
+  <desc id="desc">Mobile summary of public missions, core techniques, latest scroll, and flagship project.</desc>
+  <defs><pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="{INK}" opacity=".13"/></pattern></defs>
   <style>
-    .eyebrow {{ font: 600 13px 'Segoe UI',Arial,sans-serif; letter-spacing: 3px; fill:#8ea3c7 }}
-    .heading {{ font: 700 24px 'Segoe UI',Arial,sans-serif; letter-spacing: 1px; fill:#eef7ff }}
-    .label {{ font: 600 12px Consolas,monospace; letter-spacing: 1px; fill:#8ea3c7 }}
-    .value {{ font: 700 23px 'Segoe UI',Arial,sans-serif; letter-spacing:.4px }}
+    .eyebrow {{ font:800 12px Arial,sans-serif; letter-spacing:3px; fill:{LAVENDER} }}
+    .heading {{ font:900 25px 'Arial Black',Impact,sans-serif; fill:{INK} }}
+    .label {{ font:700 12px Consolas,monospace; letter-spacing:1px; fill:#5a5148 }}
+    .value {{ font:900 22px 'Arial Black',Arial,sans-serif }}
   </style>
-  <rect x="1" y="1" width="598" height="453" rx="24" fill="url(#bg)" stroke="#26345f"/>
-  <path d="M28 78 H572" stroke="url(#line)" opacity=".7"/>
-  <circle cx="557" cy="37" r="4" fill="#22d3ee"/>
-  <text x="28" y="34" class="eyebrow">LIVE TELEMETRY</text>
-  <text x="28" y="67" class="heading">MISSION CONTROL</text>
+  <rect x="1" y="1" width="598" height="453" rx="12" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>
+  <rect x="1" y="1" width="598" height="453" rx="12" fill="url(#dots)"/>
+  <path d="M24 78 H576" stroke="{INK}" stroke-width="4"/><path d="M24 85 H576" stroke="{ORANGE}" stroke-width="2"/>
+  <text x="28" y="34" class="eyebrow">LIVE FROM GITHUB</text>
+  <text x="28" y="68" class="heading">TRAINING RECORD</text>
   {mobile_cells}
-</svg>
-"""
+</svg>'''
     (ASSETS / "mission-control-mobile.svg").write_text(mobile_svg, encoding="utf-8")
 
 
-def mobile_card_cell(x: int, y: int, label: str, value: str, accent: str) -> str:
-    return f"""
-      <g transform="translate({x} {y})">
-        <rect width="258" height="140" rx="18" fill="#0b1228" stroke="#22325e" />
-        <circle cx="22" cy="27" r="5" fill="{accent}" />
-        <text x="37" y="33" class="label">{svg_escape(label)}</text>
-        <text x="20" y="88" class="value" fill="{accent}">{svg_escape(value)}</text>
-      </g>"""
-
-
-def write_button(filename: str, label: str, width: int, color_a: str, color_b: str) -> None:
+def write_button(filename: str, label: str, width: int, accent: str) -> None:
     safe = svg_escape(label)
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="46" viewBox="0 0 {width} 46" role="img" aria-label="{safe}">
-  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="{color_a}"/><stop offset="1" stop-color="{color_b}"/></linearGradient></defs>
-  <rect x="1" y="1" width="{width - 2}" height="44" rx="12" fill="#070b1b" stroke="url(#g)" stroke-width="2"/>
-  <circle cx="23" cy="23" r="5" fill="{color_a}"/>
-  <text x="{width / 2 + 7}" y="29" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="1.1" fill="#f4f8ff">{safe}</text>
-</svg>
-"""
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="46" viewBox="0 0 {width} 46" role="img" aria-label="{safe}">
+  <rect x="2" y="2" width="{width - 4}" height="42" rx="5" fill="{PAPER}" stroke="{INK}" stroke-width="3"/>
+  <path d="M2 12 L12 2 M{width - 12} 44 L{width - 2} 34" stroke="{accent}" stroke-width="5"/>
+  <circle cx="22" cy="23" r="5" fill="{accent}"/>
+  <text x="{width / 2 + 8}" y="29" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="13" font-weight="900" letter-spacing=".8" fill="{INK}">{safe}</text>
+</svg>'''
     (ASSETS / filename).write_text(svg, encoding="utf-8")
 
 
@@ -145,11 +137,12 @@ def main() -> None:
     ASSETS.mkdir(parents=True, exist_ok=True)
     repos = github_json(f"/users/{USERNAME}/repos?per_page=100&type=owner&sort=pushed")
     write_mission_control(repos)
-    write_button("cta-dipc.svg", "LAUNCH DIPC  ↗", 190, "#22d3ee", "#3b82f6")
-    write_button("cta-work.svg", "EXPLORE MY WORK  ↗", 220, "#60a5fa", "#8b5cf6")
-    write_button("cta-dev.svg", "FOLLOW ON DEV  ↗", 190, "#8b5cf6", "#c084fc")
-    write_button("cta-build.svg", "BUILD WITH DIPC  ↗", 220, "#22d3ee", "#8b5cf6")
+    write_button("cta-dipc.svg", "LAUNCH DIPC  ↗", 190, ORANGE)
+    write_button("cta-work.svg", "EXPLORE MY WORK  ↗", 220, LAVENDER)
+    write_button("cta-dev.svg", "FOLLOW ON DEV  ↗", 190, ORANGE)
+    write_button("cta-build.svg", "BUILD WITH DIPC  ↗", 220, LAVENDER)
 
 
 if __name__ == "__main__":
     main()
+

@@ -1,47 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="245" viewBox="0 0 1200 245" role="img" aria-labelledby="title desc">
-  <title id="title">Aryan Kumar mission control</title>
-  <desc id="desc">Live summary of public builds, core languages, latest launch, and flagship project.</desc>
+  <title id="title">Aryan Kumar manga training record</title>
+  <desc id="desc">Live summary of public missions, core techniques, latest scroll, and flagship project.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#050816"/><stop offset="0.55" stop-color="#0a1025"/><stop offset="1" stop-color="#140b2d"/>
-    </linearGradient>
-    <linearGradient id="line" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#111111" opacity=".13"/></pattern>
   </defs>
   <style>
-    .eyebrow { font: 600 14px 'Segoe UI',Arial,sans-serif; letter-spacing: 4px; fill:#8ea3c7 }
-    .heading { font: 700 24px 'Segoe UI',Arial,sans-serif; letter-spacing: 1px; fill:#eef7ff }
-    .label { font: 600 12px Consolas,monospace; letter-spacing: 1.4px; fill:#8ea3c7 }
-    .value { font: 700 22px 'Segoe UI',Arial,sans-serif; letter-spacing:.5px }
+    .eyebrow { font: 800 13px Arial,sans-serif; letter-spacing:4px; fill:#8c73c7 }
+    .heading { font: 900 27px 'Arial Black',Impact,sans-serif; letter-spacing:1px; fill:#111111 }
+    .label { font: 700 12px Consolas,monospace; letter-spacing:1.2px; fill:#5a5148 }
+    .value { font: 900 22px 'Arial Black',Arial,sans-serif; letter-spacing:.3px }
   </style>
-  <rect x="1" y="1" width="1198" height="243" rx="24" fill="url(#bg)" stroke="#26345f"/>
-  <path d="M28 67 H1172" stroke="url(#line)" opacity=".7"/>
-  <circle cx="1147" cy="35" r="4" fill="#22d3ee" filter="url(#glow)"/>
-  <text x="42" y="35" class="eyebrow">LIVE TELEMETRY</text>
-  <text x="42" y="63" class="heading">MISSION CONTROL</text>
+  <rect x="1" y="1" width="1198" height="243" rx="12" fill="#f4e9d8" stroke="#111111" stroke-width="3"/>
+  <rect x="1" y="1" width="1198" height="243" rx="12" fill="url(#dots)"/>
+  <path d="M24 68 H1176" stroke="#111111" stroke-width="4"/><path d="M24 75 H1176" stroke="#f47a1f" stroke-width="2"/>
+  <text x="42" y="31" class="eyebrow">LIVE FROM GITHUB</text>
+  <text x="42" y="61" class="heading">TRAINING RECORD</text>
+  <text x="1160" y="52" text-anchor="end" font-family="Georgia,serif" font-size="44" font-weight="700" fill="#111111" opacity=".18">忍</text>
   
-      <g transform="translate(42 92)">
-        <rect width="258" height="112" rx="18" fill="#0b1228" stroke="#22325e" />
-        <circle cx="24" cy="25" r="5" fill="#22d3ee" />
-        <text x="39" y="31" class="label">PUBLIC BUILDS</text>
-        <text x="22" y="75" class="value" fill="#22d3ee">16</text>
+      <g transform="translate(42 98)">
+        <rect width="258" height="108" rx="4" fill="#fffaf0" stroke="#111111" stroke-width="3"/>
+        <path d="M0 12 L12 0 M246 108 L258 96" stroke="#f47a1f" stroke-width="5"/>
+        <circle cx="24" cy="25" r="5" fill="#f47a1f"/>
+        <text x="39" y="31" class="label">PUBLIC MISSIONS</text>
+        <text x="22" y="77" class="value" fill="#111111">16</text>
       </g>
-      <g transform="translate(328 92)">
-        <rect width="258" height="112" rx="18" fill="#0b1228" stroke="#22325e" />
-        <circle cx="24" cy="25" r="5" fill="#a78bfa" />
-        <text x="39" y="31" class="label">CORE LANGUAGES</text>
-        <text x="22" y="75" class="value" fill="#a78bfa">4</text>
+      <g transform="translate(328 98)">
+        <rect width="258" height="108" rx="4" fill="#fffaf0" stroke="#111111" stroke-width="3"/>
+        <path d="M0 12 L12 0 M246 108 L258 96" stroke="#8c73c7" stroke-width="5"/>
+        <circle cx="24" cy="25" r="5" fill="#8c73c7"/>
+        <text x="39" y="31" class="label">CORE TECHNIQUES</text>
+        <text x="22" y="77" class="value" fill="#111111">4</text>
       </g>
-      <g transform="translate(614 92)">
-        <rect width="258" height="112" rx="18" fill="#0b1228" stroke="#22325e" />
-        <circle cx="24" cy="25" r="5" fill="#60a5fa" />
-        <text x="39" y="31" class="label">LATEST LAUNCH</text>
-        <text x="22" y="75" class="value" fill="#60a5fa">THE DENTIST</text>
+      <g transform="translate(614 98)">
+        <rect width="258" height="108" rx="4" fill="#fffaf0" stroke="#111111" stroke-width="3"/>
+        <path d="M0 12 L12 0 M246 108 L258 96" stroke="#f47a1f" stroke-width="5"/>
+        <circle cx="24" cy="25" r="5" fill="#f47a1f"/>
+        <text x="39" y="31" class="label">LATEST SCROLL</text>
+        <text x="22" y="77" class="value" fill="#111111">THE DENTIST</text>
       </g>
-      <g transform="translate(900 92)">
-        <rect width="258" height="112" rx="18" fill="#0b1228" stroke="#22325e" />
-        <circle cx="24" cy="25" r="5" fill="#c084fc" />
-        <text x="39" y="31" class="label">FLAGSHIP</text>
-        <text x="22" y="75" class="value" fill="#c084fc">DIPC</text>
+      <g transform="translate(900 98)">
+        <rect width="258" height="108" rx="4" fill="#fffaf0" stroke="#111111" stroke-width="3"/>
+        <path d="M0 12 L12 0 M246 108 L258 96" stroke="#8c73c7" stroke-width="5"/>
+        <circle cx="24" cy="25" r="5" fill="#8c73c7"/>
+        <text x="39" y="31" class="label">S-RANK FLAGSHIP</text>
+        <text x="22" y="77" class="value" fill="#111111">DIPC</text>
       </g>
 </svg>
