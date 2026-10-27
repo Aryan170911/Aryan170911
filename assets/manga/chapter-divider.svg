@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="92" viewBox="0 0 900 92" role="img" aria-labelledby="title desc">
+  <title id="title">Next manga chapter</title>
+  <desc id="desc">Ink lines and halftone dots introduce the next chapter.</desc>
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#111111" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="92" rx="12" fill="#f4e9d8"/>
+  <path d="M28 45 H356 M544 45 H872" stroke="#111111" stroke-width="4"/>
+  <path d="M28 54 H330 M570 54 H872" stroke="#f47a1f" stroke-width="2"/>
+  <rect x="381" y="16" width="138" height="60" transform="rotate(-2 450 46)" fill="url(#dots)" stroke="#111111" stroke-width="3"/>
+  <text x="450" y="42" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="12" letter-spacing="3" fill="#111111">NEXT</text>
+  <text x="450" y="59" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="15" letter-spacing="2" fill="#111111">CHAPTER</text>
+</svg>
