@@ -48,8 +48,25 @@ def main() -> int:
     gif_path = MANGA / "ink-transition.gif"
     if gif_path.exists():
         with Image.open(gif_path) as gif:
-            if getattr(gif, "n_frames", 1) < 8:
+            frame_count = getattr(gif, "n_frames", 1)
+            if frame_count < 8:
                 fail("ink-transition.gif must contain at least 8 frames", errors)
+            gif.seek(frame_count // 2)
+            center = gif.convert("RGB").crop((410, 2, 490, 82))
+            pixels = center.get_flattened_data()
+            orange_pixels = sum(
+                1
+                for red, green, blue in pixels
+                if red > 200 and 70 < green < 160 and blue < 80
+            )
+            pixels = center.get_flattened_data()
+            dark_pixels = sum(
+                1
+                for red, green, blue in pixels
+                if red < 45 and green < 45 and blue < 45
+            )
+            if orange_pixels < 900 or dark_pixels < 300:
+                fail("ink-transition.gif must reveal the centered Konoha crest", errors)
         if gif_path.stat().st_size > MAX_GIF_BYTES:
             fail(f"ink-transition.gif exceeds {MAX_GIF_BYTES} bytes", errors)
 
@@ -84,7 +101,7 @@ def main() -> int:
     print("PROFILE CHECK PASSED")
     print(f"- {len(REQUIRED)} manga assets present")
     print(f"- {len(informative_images)} README images include alt attributes")
-    print("- local links, sizes, GIF motion, SVG safety, and rights note verified")
+    print("- local links, sizes, Konoha GIF motion, SVG safety, and rights note verified")
     return 0
 
 

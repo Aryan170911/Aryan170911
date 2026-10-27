@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 import random
 from pathlib import Path
 
@@ -15,6 +16,75 @@ PAPER = "#f4e9d8"
 INK = "#111111"
 ORANGE = "#f47a1f"
 LAVENDER = "#8c73c7"
+
+
+def _draw_konoha_mark(image: Image.Image, reveal: float) -> None:
+    """Fade and scale a crisp Hidden Leaf-inspired crest into the ink wipe."""
+    if reveal <= 0:
+        return
+
+    supersample = 4
+    badge_size = 72
+    canvas_size = badge_size * supersample
+    badge = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(badge)
+
+    inset = 4 * supersample
+    draw.ellipse(
+        (inset, inset, canvas_size - inset, canvas_size - inset),
+        fill=ORANGE,
+        outline=INK,
+        width=3 * supersample,
+    )
+
+    center_x = canvas_size / 2 - 2 * supersample
+    center_y = canvas_size / 2 + 2 * supersample
+    spiral: list[tuple[float, float]] = []
+    steps = 96
+    for step in range(steps):
+        theta = (step / (steps - 1)) * math.tau * 1.08
+        radius = (2.5 + 18.5 * step / (steps - 1)) * supersample
+        spiral.append(
+            (
+                center_x + radius * math.cos(-theta),
+                center_y + radius * math.sin(-theta),
+            )
+        )
+
+    stroke = 4 * supersample
+    draw.line(spiral, fill=INK, width=stroke, joint="curve")
+    end_x, end_y = spiral[-1]
+    draw.line(
+        (
+            (end_x, end_y),
+            (center_x + 27 * supersample, center_y - 2 * supersample),
+            (center_x + 31 * supersample, center_y - 7 * supersample),
+        ),
+        fill=INK,
+        width=stroke,
+        joint="curve",
+    )
+
+    # The pointed upper flick turns the spiral into the familiar leaf silhouette.
+    draw.polygon(
+        (
+            (center_x - 18 * supersample, center_y - 12 * supersample),
+            (center_x - 14 * supersample, center_y - 29 * supersample),
+            (center_x + 1 * supersample, center_y - 19 * supersample),
+        ),
+        fill=INK,
+    )
+
+    badge = badge.resize((badge_size, badge_size), Image.Resampling.LANCZOS)
+    scale = 0.72 + 0.28 * reveal
+    rendered_size = max(1, round(badge_size * scale))
+    if rendered_size != badge_size:
+        badge = badge.resize((rendered_size, rendered_size), Image.Resampling.LANCZOS)
+
+    alpha = badge.getchannel("A").point(lambda value: round(value * reveal))
+    badge.putalpha(alpha)
+    position = ((image.width - rendered_size) // 2, (image.height - rendered_size) // 2)
+    image.paste(badge, position, badge)
 
 
 def optimize_panels() -> None:
@@ -60,6 +130,9 @@ def build_transition() -> None:
             y = rng.randint(0, height - 1)
             radius = rng.randint(1, 4)
             draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill=INK)
+
+        mark_reveal = max(0.0, min(1.0, (progress - 0.24) / 0.46))
+        _draw_konoha_mark(image, mark_reveal)
         frames.append(image)
 
     frames += list(reversed(frames[1:-1]))
