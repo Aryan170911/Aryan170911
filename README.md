@@ -1,102 +1,128 @@
 <div align="center">
 
 <a href="https://dipc-ochre.vercel.app">
-  <img src="./assets/galaxy-header.gif" alt="Animated galaxy banner for Aryan Kumar — Interactive Web, AI Automation, Bots and Games" width="100%" />
+  <img src="./assets/manga/hero.png" alt="Naruto and Hinata welcome visitors into Aryan Kumar's manga-inspired developer workspace" width="100%" />
 </a>
 
-### I don't just ship pages. I build digital worlds people remember.
+# ARYAN KUMAR
+
+### Builder of interactive web experiences, AI automation, bots, and games.
+
+*A developer journey told like a manga chapter — powered by determination, thoughtful craft, and things that actually ship.*
 
 <a href="https://dipc-ochre.vercel.app"><img src="./assets/cta-dipc.svg" alt="Launch DIPC" height="42" /></a>
-<a href="https://github.com/Aryan170911?tab=repositories"><img src="./assets/cta-work.svg" alt="Explore my work" height="42" /></a>
-<a href="https://dev.to/aryan170911"><img src="./assets/cta-dev.svg" alt="Follow on DEV" height="42" /></a>
+<a href="https://github.com/Aryan170911?tab=repositories"><img src="./assets/cta-work.svg" alt="Explore Aryan's work" height="42" /></a>
+<a href="https://dev.to/aryan170911"><img src="./assets/cta-dev.svg" alt="Follow Aryan on DEV" height="42" /></a>
+
+<img src="./assets/manga/ink-transition.gif" alt="" width="100%" />
 
 </div>
 
-## `> identity`
+## CHAPTER 01 · THE JOURNEY
 
-I'm **Aryan Kumar**, the builder behind **DIPC**. I combine engineering and visual storytelling to create immersive websites, practical AI automation, Telegram bots, and game systems with personality.
+<img src="./assets/manga/journey.png" alt="Naruto and Hinata walk together through manga panels of code, designs, and hard-earned progress" width="100%" />
 
-> **My north star:** make technology feel less like a tool and more like an experience.
+I am **Aryan Kumar**, the builder behind **DIPC**. Like every worthwhile story, mine is still being written: one ambitious interface, one automation, and one strange experiment at a time.
+
+Naruto's determination and Hinata's quiet strength capture the way I want to build—**keep moving, care about the details, and create things that help people.**
+
+> **My ninja way:** turn imagination into software people remember and can actually use.
+
+<div align="center">
+  <img src="./assets/manga/chapter-divider.svg" alt="Next manga chapter" width="100%" />
+</div>
+
+## CHAPTER 02 · TRAINING RECORD
+
+<img src="./assets/manga/training.png" alt="Naruto and Hinata train as software builders with code, interface plans, and automation diagrams" width="100%" />
+
+```text
+NINJUTSU // FRONTEND    Next.js · React · TypeScript · JavaScript · Tailwind CSS
+TAIJUTSU // MOTION      Three.js · React Three Fiber · GSAP · Framer Motion
+GENJUTSU // AUTOMATION  Python · Node.js · REST APIs · Telegram Bot API
+CHAKRA   // CRAFT       Responsive UI · Accessibility · Performance · Storytelling
+```
 
 <picture>
   <source media="(max-width: 600px)" srcset="./assets/mission-control-mobile.svg" />
-  <img src="./assets/mission-control.svg" alt="Mission Control: live overview of Aryan Kumar's public GitHub work" width="100%" />
+  <img src="./assets/mission-control.svg" alt="Aryan Kumar's live manga training record with public builds, core techniques, latest project, and flagship mission" width="100%" />
 </picture>
 
-## `> flagship_missions`
+<div align="center">
+  <img src="./assets/manga/ink-transition.gif" alt="" width="100%" />
+</div>
 
-### `01` · [DIPC — Digital India Promotion Company](https://github.com/Aryan170911/dipc)
+## CHAPTER 03 · S-RANK MISSIONS
 
-**A production-grade company experience built to turn attention into conversations.**
+### `MISSION 01` · [DIPC — Digital India Promotion Company](https://github.com/Aryan170911/dipc)
 
-Next.js and TypeScript power a bilingual interface with WebGL visuals, scroll choreography, live GitHub data, an AI sales assistant, and graceful performance fallbacks for lower-powered devices.
+> **The flagship mission:** a production-grade company experience built to turn attention into conversations.
 
-**Stack:** `Next.js` · `React` · `TypeScript` · `Three.js` · `GSAP` · `Tailwind CSS`
+Next.js and TypeScript power a bilingual interface with WebGL visuals, scroll choreography, live GitHub data, an AI sales assistant, and graceful fallbacks for lower-powered devices.
 
-[**Launch the live experience ↗**](https://dipc-ochre.vercel.app) · [**Explore the source ↗**](https://github.com/Aryan170911/dipc)
+**Techniques:** `Next.js` · `React` · `TypeScript` · `Three.js` · `GSAP` · `Tailwind CSS`
 
----
-
-### `02` · [The Dentist](https://github.com/Aryan170911/the-dentist)
-
-**A focused clinic website designed to move visitors from discovery to booking.**
-
-Animated interactions, responsive presentation, and direct WhatsApp booking create a clear path for patients at The Dentist, Khemnichak Patna.
-
-**Stack:** `JavaScript` · `HTML` · `CSS` · `Motion Design`
-
-[**Explore the project ↗**](https://github.com/Aryan170911/the-dentist)
+[**ENTER THE LIVE EXPERIENCE ↗**](https://dipc-ochre.vercel.app) · [**READ THE SOURCE SCROLL ↗**](https://github.com/Aryan170911/dipc)
 
 ---
 
-### `03` · [Mathrubhumi Enterprises](https://github.com/Aryan170911/Mathrubhumi-Enterprises)
+### `MISSION 02` · [The Dentist](https://github.com/Aryan170911/the-dentist)
 
-**An interactive corporate experience for steel engineering and fabrication.**
+> **The precision mission:** a clinic website designed to move visitors from discovery to booking.
 
-The site pairs industrial clarity with responsive motion, project storytelling, and focused lead capture for a business serving India and Nepal.
+Responsive motion and direct WhatsApp booking give patients at The Dentist, Khemnichak Patna, a clear path to action.
 
-**Stack:** `HTML` · `Tailwind CSS` · `JavaScript` · `GSAP`
+**Techniques:** `JavaScript` · `HTML` · `CSS` · `Motion Design`
 
-[**Explore the project ↗**](https://github.com/Aryan170911/Mathrubhumi-Enterprises)
+[**OPEN THE MISSION ↗**](https://github.com/Aryan170911/the-dentist)
 
 ---
 
-### `04` · [Portfolio Demos](https://github.com/Aryan170911/portfolio-demos)
+### `MISSION 03` · [Mathrubhumi Enterprises](https://github.com/Aryan170911/Mathrubhumi-Enterprises)
 
-**A laboratory for interactive frontend concepts.**
+> **The industry mission:** an interactive corporate experience for steel engineering and fabrication.
 
-Reusable experiments spanning clinic, restaurant, chatbot, and portfolio experiences—built to explore how motion and interface details shape a product's character.
+Industrial clarity, responsive motion, project storytelling, and focused lead capture support a business serving India and Nepal.
 
-**Stack:** `React` · `Vite` · `JavaScript` · `Tailwind CSS`
+**Techniques:** `HTML` · `Tailwind CSS` · `JavaScript` · `GSAP`
 
-[**Enter the laboratory ↗**](https://github.com/Aryan170911/portfolio-demos)
+[**OPEN THE MISSION ↗**](https://github.com/Aryan170911/Mathrubhumi-Enterprises)
 
-## `> systems_online`
+---
 
-```text
-FRONTEND     Next.js · React · TypeScript · JavaScript · Tailwind CSS
-MOTION       Three.js · React Three Fiber · GSAP · Framer Motion
-AUTOMATION   Python · Node.js · REST APIs · Telegram Bot API
-CRAFT        Responsive UI · Accessibility · Performance · Storytelling
-```
+### `MISSION 04` · [Portfolio Demos](https://github.com/Aryan170911/portfolio-demos)
 
-## `> community_signal`
+> **The experimentation mission:** a laboratory for interactive frontend concepts.
 
-- 🌌 Building ambitious digital experiences through **DIPC**
-- 🍂 Registered for [**Hacktoberfest 2026**](https://hacktoberfest.com)
-- 📝 Connected with the [**DEV Community**](https://dev.to/aryan170911)
-- 🤝 Open to collaborations where design, automation, and imagination overlap
+Clinic, restaurant, chatbot, and portfolio prototypes explore how motion and tiny interface decisions change a product's character.
 
-## `> open_channel`
+**Techniques:** `React` · `Vite` · `JavaScript` · `Tailwind CSS`
+
+[**ENTER THE LABORATORY ↗**](https://github.com/Aryan170911/portfolio-demos)
+
+<div align="center">
+  <img src="./assets/manga/chapter-divider.svg" alt="Final manga chapter" width="100%" />
+</div>
+
+## FINAL CHAPTER · LET'S BUILD SOMETHING LEGENDARY
+
+<a href="https://dipc-ochre.vercel.app">
+  <img src="./assets/manga/finale.png" alt="Naruto and Hinata invite visitors to build the next chapter with Aryan at sunset" width="100%" />
+</a>
 
 <div align="center">
 
-### Have an idea that deserves more than an ordinary interface?
+### Your idea could be the next mission.
 
-**Let's turn it into something people want to explore.**
+**If it deserves more than an ordinary interface, let's give it a story people remember.**
 
 <a href="https://dipc-ochre.vercel.app"><img src="./assets/cta-build.svg" alt="Build with DIPC" height="46" /></a>
 
-<sub>NEON FORGE // DIPC // BUILDING IN PUBLIC</sub>
+<sub>DIPC // BUILDING IN PUBLIC // THE NEXT CHAPTER STARTS HERE</sub>
+
+<br /><br />
+
+<sub>Unofficial fan-made profile artwork. Naruto and related characters belong to their respective rights holders.</sub>
 
 </div>
+
